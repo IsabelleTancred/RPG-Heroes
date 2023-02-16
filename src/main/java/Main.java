@@ -16,4 +16,9 @@ public class Main {
         mage.display();
         System.out.println(mage.equipment.get(Slot.WEAPON));
     }
+
+    //TODO: write tests
+    //TODO: protect/private as much as possible
+    //TODO: fix error (unsafe operation in hero-class)
+    //TODO: if time -> refactor
 }
