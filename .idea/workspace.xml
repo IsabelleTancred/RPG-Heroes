@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12eb1ede-e0e4-4eca-b01c-dcf115f4b199" name="Changes" comment="Feat: Initial commit">
+    <list default="true" id="12eb1ede-e0e4-4eca-b01c-dcf115f4b199" name="Changes" comment="Feat: new repo using gradle and tests. Copy old packages and classes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/InvalidArmorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/InvalidArmorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/InvalidWeaponException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/InvalidWeaponException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/HeroAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/ArmorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/ArmorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/WeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/WeaponType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +38,31 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="01c67033-6658-44ec-88fc-f1095fbef33b" />
+        <option name="url" value="https://github.com/IsabelleTancred/RPG-Heroes.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,10 +80,20 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -79,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676560498359</updated>
-      <workItem from="1676560499637" duration="303000" />
+      <workItem from="1676560499637" duration="1324000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: Initial commit">
       <created>1676560628122</created>
@@ -88,14 +131,45 @@
       <option name="project" value="LOCAL" />
       <updated>1676560628122</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feat: new repo using gradle and tests. Copy old packages and classes.">
+      <created>1676561103779</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676561103779</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="copy_old_repo" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Feat: Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Initial commit" />
+    <MESSAGE value="Feat: new repo using gradle and tests. Copy old packages and classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: new repo using gradle and tests. Copy old packages and classes." />
   </component>
 </project>
