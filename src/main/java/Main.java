@@ -14,7 +14,7 @@ public class Main {
         mage.levelUp();
         mage.equip(weapon);
         mage.display();
-        System.out.println(mage.equipment.get(Slot.WEAPON));
+        System.out.println(mage.getEquipment().get(Slot.WEAPON));
     }
 
     //TODO: write tests

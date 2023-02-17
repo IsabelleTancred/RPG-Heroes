@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12eb1ede-e0e4-4eca-b01c-dcf115f4b199" name="Changes" comment="Feat: new repo using gradle &amp; tests. Copy old functionality.">
+    <list default="true" id="12eb1ede-e0e4-4eca-b01c-dcf115f4b199" name="Changes" comment="Refactor: privates and protected">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/HeroAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +46,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -71,6 +81,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -163,6 +177,7 @@
     <MESSAGE value="Feat: Initial commit" />
     <MESSAGE value="Feat: new repo using gradle and tests. Copy old packages and classes." />
     <MESSAGE value="Feat: new repo using gradle &amp; tests. Copy old functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: new repo using gradle &amp; tests. Copy old functionality." />
+    <MESSAGE value="Refactor: privates and protected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor: privates and protected" />
   </component>
 </project>

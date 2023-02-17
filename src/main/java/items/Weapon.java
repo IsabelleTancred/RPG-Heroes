@@ -8,7 +8,7 @@ public class Weapon extends Item {
     public Weapon(String name, WeaponType weaponType, int requiredLevel, int weaponDamage){
         this.name=name;
         this.weaponType=weaponType;
-        this.requiredLevel=requiredLevel;
+        this.setRequiredLevel(requiredLevel);
         this.weaponDamage=weaponDamage;
         slot= Slot.WEAPON;
     }
