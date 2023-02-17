@@ -5,16 +5,36 @@ import items.WeaponType;
 
 public class Main {
     static Mage mage = new Mage("Isabelle");
-    static Weapon weapon = new Weapon("Axe", WeaponType.STAFF, 5, 3);
+    static Weapon weapon = new Weapon("Axe", WeaponType.STAFF, 1, 3);
 
     public static void main(String[] args) {
         System.out.println("Hello World");
+        System.out.println(mage.damage());
         mage.display();
         mage.levelUp();
         mage.levelUp();
-        mage.equip(weapon);
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+        mage.levelUp();
+       // mage.equip(weapon);
         mage.display();
-        System.out.println(mage.equipment.get(Slot.WEAPON));
+       System.out.println(mage.damage());
+        System.out.println(mage.getEquipment().get(Slot.WEAPON));
     }
 
     //TODO: write tests

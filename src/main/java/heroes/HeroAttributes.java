@@ -41,4 +41,11 @@ public class HeroAttributes {
         this.setDexterity(this.getDexterity()+ha2.getDexterity());
         this.setIntelligence(this.getIntelligence()+ ha2.getIntelligence());
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        HeroAttributes that = (HeroAttributes) o;
+        return strength == that.strength && dexterity == that.dexterity && intelligence == that.intelligence;
+    }
 }

@@ -6,15 +6,20 @@ import items.*;
 import java.util.*;
 
 public abstract class Hero {
-    String name;
-    int level;
-    HeroAttributes levelAttributes;
 
-    public Map<Slot, Item> equipment = new HashMap<Slot,Item>();
+    private final String name;
 
-    Set<WeaponType> validWeaponTypes=new HashSet<WeaponType>();
+    private int level;
 
-    Set<Armor> validArmorTypes=new HashSet<Armor>();
+
+    protected HeroAttributes levelAttributes;
+
+
+    protected Map<Slot, Item> equipment = new HashMap<>() ;
+
+    private Set<WeaponType> validWeaponTypes=new HashSet<WeaponType>();
+
+    private Set<Armor> validArmorTypes=new HashSet<Armor>();
 
     public Hero(String name, HeroAttributes heroAttributes, Set validWeaponTypes, Set validArmorTypes) {
         this.name = name;
@@ -34,13 +39,13 @@ public abstract class Hero {
     public void equip(Weapon weapon) {
         try {
 
-            if (weapon.requiredLevel > this.level) {
+            if (weapon.getRequiredLevel() > this.getLevel()) {
                 throw new InvalidWeaponException("The weapons required level is higher than the heroes level");
             }
             if (!validWeaponTypes.contains(weapon.getWeaponType())) {
-                throw new InvalidWeaponException("invalid weaponType");
+                throw new InvalidWeaponException("Invalid weaponType");
             }
-            equipment.put(weapon.slot, weapon);
+            equipment.put(weapon.getSlot(), weapon);
         }
         catch (InvalidWeaponException e){
             System.out.println(e.getMessage());
@@ -49,20 +54,20 @@ public abstract class Hero {
 
     public void equip(Armor armor) {
         try {
-            if (armor.requiredLevel > this.level) {
+            if (armor.getRequiredLevel() > this.getLevel()) {
                 throw new InvalidArmorException("The armors required level is higher than the heroes level"); //TODO: fix a custom InvalidArmorException
             }
             if (!validArmorTypes.contains(armor.getArmorType())) {
-                throw new InvalidArmorException("invalid armorType");
+                throw new InvalidArmorException("Invalid armorType");
             }
-            equipment.put(armor.slot, armor);
+            equipment.put(armor.getSlot(), armor);
         }
         catch (InvalidArmorException e){
             System.out.println(e.getMessage());
         }
     }
 
-    public int damage() {
+    public double damage() {
         int weaponDamage;
         if (equipment.get(Slot.WEAPON) == null || equipment.get(Slot.WEAPON) instanceof Armor) {
             weaponDamage = 1;
@@ -70,7 +75,7 @@ public abstract class Hero {
             Weapon a = (Weapon) equipment.get(Slot.WEAPON);
             weaponDamage = a.getWeaponDamage();
         }
-        int heroDamage = weaponDamage * (1 + (totalAttributes().getDexterity() / 100));
+        double heroDamage = weaponDamage * (1 + (totalAttributes().getDexterity() / 100));
         return heroDamage;
     }
 
@@ -84,12 +89,33 @@ public abstract class Hero {
         return total;
     }
 
-    public void display() {
-        String str = "Name: " + name + " Level: " + level + " Class: " + this.getClass().getSimpleName() +
-                " Hero attributes: Strength:" + levelAttributes.getStrength() +
-                " Dexterity: " + levelAttributes.getDexterity() + " Intelligence: " + levelAttributes.getIntelligence();
-
-        System.out.println(str);
+    public String display() {
+        String nameString= "Name: " + this.name ;
+        String classString= "Class: " + this.getClass().getSimpleName();
+        String levelString= "Level: " + this.level;
+        String heroAttributesString= "TotalStrength: " + this.totalAttributes().getStrength() + "\n" +
+        "TotalDexterity: " + this.totalAttributes().getDexterity() + "\n" +
+                "TotalIntelligence: " + this.totalAttributes().getIntelligence() ;
+        String damageString=  "Damage: " + this.damage();
+        String str = nameString + "\n" + classString  + "\n" + levelString  + "\n" + heroAttributesString + "\n" + damageString;
+        return str;
+    }
+    public String getName() {
+        return name;
     }
 
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+    public Map<Slot, Item> getEquipment() {
+        return equipment;
+    }
+    public HeroAttributes getLevelAttributes() {
+        return levelAttributes;
+    }
 }

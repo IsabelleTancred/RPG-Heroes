@@ -18,7 +18,7 @@ public class Ranger extends Hero{
         levelAttributes.setStrength(levelAttributes.getStrength()+1);
         levelAttributes.setDexterity(levelAttributes.getDexterity()+5);
         levelAttributes.setIntelligence(levelAttributes.getIntelligence()+1);
-        level+=1;
+        setLevel(getLevel()+1);
     }
 
 }
