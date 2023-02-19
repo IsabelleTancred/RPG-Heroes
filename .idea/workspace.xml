@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12eb1ede-e0e4-4eca-b01c-dcf115f4b199" name="Changes" comment="Refactor: privates and protected">
-      <change afterPath="$PROJECT_DIR$/src/test/java/heroes/HeroTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/heroes/MageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/heroes/RangerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/heroes/RogueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/heroes/WarriorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/items/ArmorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/items/WeaponTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/heroes/HeroAttributesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/InvalidArmorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/InvalidArmorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/InvalidWeaponException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/InvalidWeaponException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/heroes/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/heroes/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,18 +105,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="items" />
       <recent name="heroes" />
+      <recent name="items" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HeroTest.testEquip_WeaponWithTooHighLevel_ShouldRaiseInvalidWeaponException">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="RPG-Heroes.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.WeaponTest">
     <configuration name="ArmorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -146,7 +133,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="HeroTest.testEquip_WeaponWithTooHighLevel_ShouldRaiseInvalidWeaponException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HeroTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +146,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;heroes.HeroTest.testEquip_WeaponWithTooHighLevel_ShouldRaiseInvalidWeaponException&quot;" />
+            <option value="&quot;heroes.HeroTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,7 +156,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="HeroTest.testMage_Display_ShouldShowCorrectStats" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -182,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;heroes.HeroTest.testMage_Display_ShouldShowCorrectStats&quot;" />
+            <option value="&quot;heroes.MageTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -192,7 +179,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WeaponTest.constructor_ValidInput_ShouldGetCorrectType" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MageTest.testConstructor_ValidInput_ShouldGetCorrectName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -205,7 +192,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;items.WeaponTest.constructor_ValidInput_ShouldGetCorrectType&quot;" />
+            <option value="&quot;heroes.MageTest.testConstructor_ValidInput_ShouldGetCorrectName&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="WeaponTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;items.WeaponTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -217,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.HeroTest.testEquip_WeaponWithTooHighLevel_ShouldRaiseInvalidWeaponException" />
-        <item itemvalue="Gradle.HeroTest.testMage_Display_ShouldShowCorrectStats" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.WeaponTest" />
         <item itemvalue="Gradle.ArmorTest" />
-        <item itemvalue="Gradle.WeaponTest.constructor_ValidInput_ShouldGetCorrectType" />
+        <item itemvalue="Gradle.MageTest" />
+        <item itemvalue="Gradle.MageTest.testConstructor_ValidInput_ShouldGetCorrectName" />
+        <item itemvalue="Gradle.HeroTest" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676622534278</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor: privates and protected">
+      <created>1676649114112</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676649114112</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -37,9 +37,7 @@ public abstract class Hero {
     public abstract void levelUp();
 
     public void equip(Weapon weapon) {
-        try {
-
-            if (weapon.getRequiredLevel() > this.getLevel()) {
+        if (weapon.getRequiredLevel() > this.getLevel()) {
                 throw new InvalidWeaponException("The weapons required level is higher than the heroes level");
             }
             if (!validWeaponTypes.contains(weapon.getWeaponType())) {
@@ -47,13 +45,8 @@ public abstract class Hero {
             }
             equipment.put(weapon.getSlot(), weapon);
         }
-        catch (InvalidWeaponException e){
-            System.out.println(e.getMessage());
-        }
-    }
 
     public void equip(Armor armor) {
-        try {
             if (armor.getRequiredLevel() > this.getLevel()) {
                 throw new InvalidArmorException("The armors required level is higher than the heroes level"); //TODO: fix a custom InvalidArmorException
             }
@@ -61,10 +54,6 @@ public abstract class Hero {
                 throw new InvalidArmorException("Invalid armorType");
             }
             equipment.put(armor.getSlot(), armor);
-        }
-        catch (InvalidArmorException e){
-            System.out.println(e.getMessage());
-        }
     }
 
     public double damage() {
