@@ -1,6 +1,6 @@
 package exceptions;
 
-public class InvalidArmorException extends Exception {
+public class InvalidArmorException extends RuntimeException {
     public InvalidArmorException (String errorMessage){
         super(errorMessage);
     }

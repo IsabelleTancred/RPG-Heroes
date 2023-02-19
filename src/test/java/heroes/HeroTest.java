@@ -25,8 +25,8 @@ class HeroTest {
     void setup() {
         mage = new Mage("Test");
         validWeapon = new Weapon("ValidWeapon", WeaponType.STAFF, 1, 3);
-        replacedWeapon = new Weapon("ValidWeapon", WeaponType.STAFF, 1, 5);
-        highLevelWeapon = new Weapon("HighLevelWeapon", WeaponType.STAFF, 3, 3);
+        replacedWeapon = new Weapon("ReplacedWeapon", WeaponType.STAFF, 1, 5);
+        highLevelWeapon = new Weapon("HighLevelWeapon", WeaponType.STAFF, 5, 3);
         wrongWeaponType = new Weapon("WrongTypeWeapon", WeaponType.AXE, 1, 3);
         validArmor = new Armor("ValidArmor", ArmorType.CLOTH,1, Slot.BODY, new HeroAttributes(1,1,100));
         secondValidArmor = new Armor("SecondValidArmor", ArmorType.CLOTH,1, Slot.HEAD, new HeroAttributes(1,1,1));
@@ -45,36 +45,48 @@ class HeroTest {
         @Test
         void testEquip_WeaponWithTooHighLevel_ShouldRaiseInvalidWeaponException() {
             String expected = "The weapons required level is higher than the heroes level";
-
-            Exception exception=
-            assertThrows(InvalidWeaponException.class, () -> mage.equip(highLevelWeapon));
+            Exception exception = assertThrows(InvalidWeaponException.class,
+                    () -> mage.equip(highLevelWeapon));
             String actual = exception.getMessage();
-            assertEquals(actual, expected);
+            assertEquals(expected,actual);
         }
-        /*
+
+
 
         @Test
         void testEquip_InvalidWeaponType_ShouldRaiseInvalidWeaponException() {
-            mage.equip(wrongWeaponType);
+            String expected = "Invalid weaponType";
+            Exception exception = assertThrows(InvalidWeaponException.class,
+                    () -> mage.equip(wrongWeaponType));
+            String actual = exception.getMessage();
             assertEquals(expected,actual);
         }
+
         @Test
         void testEquip_ValidArmor_ShouldPass() {
             mage.equip(validArmor);
+            String expected = "ValidArmor";
+            String actual = mage.getEquipment().get(Slot.BODY).getName();
             assertEquals(expected,actual);
         }
 
         @Test
         void testEquip_ArmorWithTooHighLevel_ShouldRaiseInvalidArmorException() {
-            mage.equip(highLevelWeapon);
+            String expected = "The armors required level is higher than the heroes level";
+            Exception exception = assertThrows(InvalidArmorException.class,
+                    () -> mage.equip(highLevelArmor));
+            String actual = exception.getMessage();
             assertEquals(expected,actual);
         }
         @Test
         void testEquip_InvalidArmorType_ShouldRaiseInvalidArmorException() {
-            mage.equip(wrongArmorType);
+            String expected = "Invalid armorType";
+            Exception exception = assertThrows(InvalidArmorException.class,
+                    () -> mage.equip(wrongArmorType));
+            String actual = exception.getMessage();
             assertEquals(expected,actual);
         }
-    */
+
     @Test
     void testMage_TotalAttributesNoArmor_ShouldGetCorrectAttributes(){
         HeroAttributes expected =new HeroAttributes(1,1,8);
